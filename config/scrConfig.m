@@ -29,19 +29,19 @@ end
 
 % Size of the display :
 if const.room == 1
-    
     % Settings 7T MRI room
     % --------------------
-    scr.disp_sizeX          =   698.4;                          % setting for BOLDScreen32' 7T
-    scr.disp_sizeY          =   392.9;                          % setting for BOLDScreen32' 7T
+    scr.disp_sizeX = 773;                       % setting for BOLDScreen32' 7T in mm
+    scr.disp_sizeY = 435;                       % setting for BOLDScreen32' 7T in mm
+    
+    scr.disp_margin_top = 6.44;                 % top margin where projection screen is not visible in cm
+    scr.disp_margin_bottom = 12.08;              % bottom margin where projection screen is not visible in cm
 
 elseif const.room == 2
-    
     % Settings eyelink room
     % ---------------------
-    scr.disp_sizeX          =   696;                            % setting for Display ++ INT
-    scr.disp_sizeY          =   391;                            % setting for Display ++ INT
-
+    scr.disp_sizeX = 696;                       % setting for Display ++ INT
+    scr.disp_sizeY = 391;                       % setting for Display ++ INT
 end
 
 % Pixels size:
@@ -78,7 +78,7 @@ if const.room == 1
     % --------------------
     
     % Screen distance 
-    scr.dist                =   154+25;                           % general screen distance in cm
+    scr.dist = 102;                           % general screen distance in cm
 
     % Center of the screen :
     scr.x_mid               =   (scr.scr_sizeX/2.0);
@@ -99,5 +99,10 @@ elseif const.room == 2
     scr.mid                 =   [scr.x_mid,scr.y_mid];
 
 end
+
+
+
+
+
 
 end

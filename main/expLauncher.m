@@ -9,15 +9,21 @@
 % Experiment in which we use a square full screen 4 directions (left/right/up/down) 
 % bar pass stimuli with an attention task to the bar in order to obtain pRF retinotopy of 
 % the occipital, parietal, frontal and subcortical structures.
-% Adapted for 7T scanner CRMBM
-% Use circular apperture
-% Add full screen cross
+% Adapted for 7T scanner CRMBM and to the ProPixx projector
+% Use circular apperture and cross.
+
+% To do
+% -----
+% Update settings and instruction for running
+% Make last size check
+% Make a video and keep in mind to crop it for visual design
 
 % Settings
 % For training:
 % -------------
 % - keep unplug hdmi, and put monitor at 60 Hz
 % - insist on button, timing of response, fixation, stimuli orientation
+
 % For main task: 
 % --------------
 % - plug Boldscreen to box (blue cable to back of box)
@@ -33,9 +39,6 @@
 % - Start session
 % - Launch code, pass instructions, it will wait for first TR
 
-% To do:
-% -----
-% - change phase direction of record in sequence
 
 % First settings
 % --------------
@@ -43,11 +46,11 @@ Screen('CloseAll');clear all;clear mex;clear functions;close all;home;AssertOpen
 
 % General settings
 % ----------------
-const.expStart          =   1;              % Start of a recording exp                          0 = NO  , 1 = YES
+const.expStart          =   0;              % Start of a recording exp                          0 = NO  , 1 = YES
 const.checkTrial        =   0;              % Print trial conditions (for debugging)            0 = NO  , 1 = YES
 const.genStimuli        =   0;              % Generate the stimuli                              0 = NO  , 1 = YES
 const.drawStimuli       =   0;              % Draw stimuli generated                            0 = NO  , 1 = YES
-const.mkVideo           =   1;              % Make a video of a run                             0 = NO  , 1 = YES
+const.mkVideo           =   0;              % Make a video of a run                             0 = NO  , 1 = YES
 
 % External controls
 % -----------------

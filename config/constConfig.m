@@ -93,7 +93,7 @@ const.noise_pixel       =   vaDeg2pix(const.noise_pixelVal,scr);                
 const.native_noise_dim  =   round([const.noise_size/const.noise_pixel,...
                                    const.noise_size/const.noise_pixel]);                        % starting size of the patch
 const.noise_color       =   'pink';                                                             % stimuli noise color ('white','pink','brownian');
-const.apt_rad_val       =   6;                                                                  % aperture stimuli radius in dva
+const.apt_rad_val       =   7;                                                                  % aperture stimuli radius in dva
 const.apt_rad           =   vaDeg2pix(const.apt_rad_val,scr);                                   % aperture stimuli radius in pixels
 
 % compute random image order
@@ -112,10 +112,17 @@ const.rand_num_tex_ver  =   const.rand_num_tex(1:round(const.frame_to_draw_ver))
 const.rand_num_tex_hor  =   const.rand_num_tex(1:round(const.frame_to_draw_hor));
 const.rand_num_tex_blk  =   const.rand_num_tex(1:round(const.frame_to_draw_blk));
 
-const.rect_noise        =  [scr.x_mid - const.noise_size/2;...                                  % noise native rect
-                            scr.y_mid - const.noise_size/2;...
-                            scr.x_mid + const.noise_size/2;...
-                            scr.y_mid + const.noise_size/2];
+const.disp_margin_top = cm2pix(scr.disp_margin_top, scr);                                       % Display top margin not seen in scanner in pix
+const.disp_margin_bottom = cm2pix(scr.disp_margin_bottom, scr);                                 % Display bottom margin not seen in scanner in pix
+const.disp_max = (scr.scr_sizeY - const.disp_margin_top - const.disp_margin_bottom);            % Display size seen in scanner in pix 
+
+const.rect_center =  [scr.x_mid, ... 
+                      const.disp_margin_top + const.disp_max/2];                                % center of the rect in projector screen
+                            
+const.rect_noise        =  [const.rect_center(1) - const.noise_size/2;...                       % noise native rect
+                            const.rect_center(2) - const.noise_size/2;...
+                            const.rect_center(1) + const.noise_size/2;...
+                            const.rect_center(2) + const.noise_size/2];
 
 % Apertures
 const.rCosine_grain     =   80;                                                                 % grain of the radius cosine steps
@@ -125,7 +132,6 @@ const.raised_cos        =   const.raised_cos(1:const.rCosine_grain)';           
 const.raised_cos        =   (const.raised_cos - min(const.raised_cos))/...
                                     (max(const.raised_cos)-min(const.raised_cos));              % normalize raising cosinus function
                                 
-
 % Stimulus circular aperture
 const.stim_aperture     =   compStimAperture(const);                                            % define stimulus aperture alpha layer
 
@@ -144,25 +150,25 @@ const.fix_dot_probe     =   const.fix_dot;
 % Fixation lines
 const.line_width = const.fix_rad;                                               % fixation line width
 const.line_color = const.white;                                                 % fixation line color
-const.line_fix_up_left = [0,...                                                 % up left part of fix cross x start
-                          scr.scr_sizeX/2 - const.fix_out_rim_rad;....          % up left part of fix cross x end
-                          -(scr.scr_sizeX-scr.scr_sizeY)/2,...                  % up left part of fix cross y start
-                          scr.scr_sizeY/2 - const.fix_out_rim_rad];             % up left part of fix cross y end
+const.line_fix_up_left = [const.rect_noise(1),...                               % up left part of fix cross x start
+                          const.rect_center(1) - const.fix_out_rim_rad;....     % up left part of fix cross x end
+                          const.rect_noise(2),...                               % up left part of fix cross y start
+                          const.rect_center(2) - const.fix_out_rim_rad];        % up left part of fix cross y end
 
-const.line_fix_up_right = [scr.scr_sizeX/2 + const.fix_out_rim_rad,...          % up right part of fix cross x start
-                           scr.scr_sizeX;....                                   % up right part of fix cross x end
-                           scr.scr_sizeY/2 - const.fix_out_rim_rad,...          % up right part of fix cross y start
-                           -(scr.scr_sizeX-scr.scr_sizeY)/2];                   % up right part of fix cross y end
+const.line_fix_up_right = [const.rect_center(1) + const.fix_out_rim_rad,...     % up right part of fix cross x start
+                           const.rect_noise(3);....                             % up right part of fix cross x end
+                           const.rect_center(2) - const.fix_out_rim_rad,...     % up right part of fix cross y start
+                           const.rect_noise(2)];                                % up right part of fix cross y end
                        
-const.line_fix_down_left = [0,...                                               % down left part of fix cross x start
-                            scr.scr_sizeX/2 - const.fix_out_rim_rad;....        % down left part of fix cross x end
-                            scr.scr_sizeY+(scr.scr_sizeX-scr.scr_sizeY)/2,...   % down left part of fix cross y start
-                            scr.scr_sizeY/2 + const.fix_out_rim_rad];           % down left part of fix cross y end
+const.line_fix_down_left = [const.rect_noise(1),...                             % down left part of fix cross x start
+                            const.rect_center(1) - const.fix_out_rim_rad;....   % down left part of fix cross x end
+                            const.rect_noise(4),...                             % down left part of fix cross y start
+                            const.rect_center(2) + const.fix_out_rim_rad];      % down left part of fix cross y end
 
-const.line_fix_down_right = [scr.scr_sizeX/2 + const.fix_out_rim_rad,...        % down right part of fix cross x start
-                             scr.scr_sizeX;....                                 % down right part of fix cross x end
-                             scr.scr_sizeY/2 + const.fix_out_rim_rad,...        % down right part of fix cross y start
-                             scr.scr_sizeY+(scr.scr_sizeX-scr.scr_sizeY)/2];    % down right part of fix cross y end
+const.line_fix_down_right = [const.rect_center(1) + const.fix_out_rim_rad,...   % down right part of fix cross x start
+                             const.rect_noise(3);....                           % down right part of fix cross x end
+                             const.rect_center(2) + const.fix_out_rim_rad,...   % down right part of fix cross y start
+                             const.rect_noise(4)];                              % down right part of fix cross y end
 
 % Bar
 const.bar_dir_run       =   [9,1,9,3,9,5,9,7,9];                                                % direction (1 = 180 deg, 2 = 225 deg, 3 =  270 deg, 4 = 315 deg,
@@ -178,12 +184,12 @@ const.bar_dir_ang_start =   0;                                                  
 const.bar_step_dir_ang  =   45;                                                                 % step between direction angles
 const.bar_dir_ang       =   const.bar_dir_ang_start:const.bar_step_dir_ang:(360-const.bar_step_dir_ang+const.bar_dir_ang_start);
 
-const.bar_aperture_rect =  [scr.x_mid - const.bar_mask_size/2,...                               % bar native rect
-                            scr.y_mid - const.bar_mask_size/2,...
-                            scr.x_mid + const.bar_mask_size/2,...
-                            scr.y_mid + const.bar_mask_size/2];
-const.bar_step_size_ver =   const.stim_size(2)*2/(const.bar_step_ver-1);                        % bar step size in pixels for vertical bar pass
-const.bar_step_size_hor =   const.stim_size(1)*2/(const.bar_step_hor-1);                        % bar step size in pixels for horizontal bar pass
+const.bar_aperture_rect =  [const.rect_center(1) - const.bar_mask_size/2,...                               % bar native rect
+                            const.rect_center(2) - const.bar_mask_size/2,...
+                            const.rect_center(1) + const.bar_mask_size/2,...
+                            const.rect_center(2) + const.bar_mask_size/2];
+const.bar_step_size_ver =   const.apt_rad*2/(const.bar_step_ver-1);                             % bar step size in pixels for vertical bar pass
+const.bar_step_size_hor =   const.apt_rad*2/(const.bar_step_hor-1);                             % bar step size in pixels for horizontal bar pass
 
 const.left_propixx_hide = [0,...                                                                % square screen left side hider
                            0,...
@@ -201,27 +207,27 @@ const.right_propixx_hide = [(scr.scr_sizeX-scr.scr_sizeY)/2+scr.scr_sizeY,...   
 for tAng = 1:size(const.bar_dir_ang,2)
     for tSteps = 1:const.bar_step_hor
         
-        const.barCtr_hor(1,tSteps,tAng) =  scr.x_mid + (cosd(const.bar_dir_ang(tAng)) * const.stim_size(1))...
+        const.barCtr_hor(1,tSteps,tAng) =  const.rect_center(1) + (cosd(const.bar_dir_ang(tAng)) * const.apt_rad)...
                                                      - (cosd(const.bar_dir_ang(tAng)) * const.bar_step_size_hor*(tSteps-1));    % bar center coord x
-        const.barCtr_hor(2,tSteps,tAng) =  scr.y_mid + (-sind(const.bar_dir_ang(tAng)) * const.stim_size(2))...
+        const.barCtr_hor(2,tSteps,tAng) =  const.rect_center(2) + (-sind(const.bar_dir_ang(tAng)) * const.apt_rad)...
                                                      - (-sind(const.bar_dir_ang(tAng)) * const.bar_step_size_hor*(tSteps-1));   % bar center coord y
         
         const.bar_aperture_rect_hor(:,:,tSteps,tAng) =  CenterRectOnPoint(const.bar_aperture_rect,const.barCtr_hor(1,tSteps,tAng),const.barCtr_hor(2,tSteps,tAng));                 % bar rect
-        const.bar_aperture_rect_hor(:,:,tSteps,tAng) =  const.bar_aperture_rect_hor(:,:,tSteps,tAng);% + [const.stim_offset(const.cond2,:),const.stim_offset(const.cond2,:)];
+        const.bar_aperture_rect_hor(:,:,tSteps,tAng) =  const.bar_aperture_rect_hor(:,:,tSteps,tAng);
     end
 end
 
 % Define vertical bar pass
-for tAng = 1:size(const.bar_dir_ang,2)
+ for tAng = 1:size(const.bar_dir_ang,2)
     for tSteps = 1:const.bar_step_ver
         
-        const.barCtr_ver(1,tSteps,tAng) =  scr.x_mid + (cosd(const.bar_dir_ang(tAng)) * const.stim_size(1))...
+        const.barCtr_ver(1,tSteps,tAng) =  const.rect_center(1) + (cosd(const.bar_dir_ang(tAng)) * const.apt_rad)...
                                                      - (cosd(const.bar_dir_ang(tAng)) * const.bar_step_size_ver*(tSteps-1));    % bar center coord x
-        const.barCtr_ver(2,tSteps,tAng) =  scr.y_mid + (-sind(const.bar_dir_ang(tAng)) * const.stim_size(2))...
+        const.barCtr_ver(2,tSteps,tAng) =  const.rect_center(2) + (-sind(const.bar_dir_ang(tAng)) * const.apt_rad)...
                                                      - (-sind(const.bar_dir_ang(tAng)) * const.bar_step_size_ver*(tSteps-1));   % bar center coord y
         
         const.bar_aperture_rect_ver(:,:,tSteps,tAng) =  CenterRectOnPoint(const.bar_aperture_rect,const.barCtr_ver(1,tSteps,tAng),const.barCtr_ver(2,tSteps,tAng));     % bar rect
-        const.bar_aperture_rect_ver(:,:,tSteps,tAng) =  const.bar_aperture_rect_ver(:,:,tSteps,tAng);% + [const.stim_offset(const.cond2,:),const.stim_offset(const.cond2,:)];
+        const.bar_aperture_rect_ver(:,:,tSteps,tAng) =  const.bar_aperture_rect_ver(:,:,tSteps,tAng);
         
    end
 end
