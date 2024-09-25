@@ -49,7 +49,7 @@ save(const.mat_file,'config');
 % First mouse config
 % ------------------
 if const.expStart
-    HideCursor;ListenChar(-1);
+    HideCursor;%ListenChar(-1);
     for keyb = 1:size(my_key.keyboard_idx,2)
         KbQueueFlush(my_key.keyboard_idx(keyb));
     end

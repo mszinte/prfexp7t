@@ -14,21 +14,16 @@
 
 % To do
 % -----
-% Update settings and instruction for running
-% Make last size check
-% Make a video and keep in mind to crop it for visual design
+% - Make a video and keep in mind to crop it for visual design
+% - test it with buttons in scanner
+% - test it with sequence
 
-% Settings
-% For training:
-% -------------
-% - keep unplug hdmi, and put monitor at 60 Hz
-% - insist on button, timing of response, fixation, stimuli orientation
-
-% For main task: 
-% --------------
-% - plug Boldscreen to box (blue cable to back of box)
-% - plug HDMI cable, select extend mode (fn + F11), boldscreen at 120 hz
-% - flip the screen pressing leftmost front button on BoldScreen box
+% Procedure to start
+% ------------------
+% - turn on projector and propixx
+% - turn on laptop (see password on it)
+% - turn on monitor
+% - close the laptop lid
 % - plug USB of button box from top part left (green dot) to laptop
 % - plug the trigger cable to the trigger box
 % - turn on power of button box (top and bottom part)
@@ -39,14 +34,13 @@
 % - Start session
 % - Launch code, pass instructions, it will wait for first TR
 
-
 % First settings
 % --------------
 Screen('CloseAll');clear all;clear mex;clear functions;close all;home;AssertOpenGL;
 
 % General settings
 % ----------------
-const.expStart          =   0;              % Start of a recording exp                          0 = NO  , 1 = YES
+const.expStart          =   1;              % Start of a recording exp                          0 = NO  , 1 = YES
 const.checkTrial        =   0;              % Print trial conditions (for debugging)            0 = NO  , 1 = YES
 const.genStimuli        =   0;              % Generate the stimuli                              0 = NO  , 1 = YES
 const.drawStimuli       =   0;              % Draw stimuli generated                            0 = NO  , 1 = YES
@@ -57,7 +51,7 @@ const.mkVideo           =   0;              % Make a video of a run             
 const.scanner           =   1;              % run in MRI scanner                                0 = NO  , 1 = YES
 const.scannerTest       =   1;              % run with T returned at TR time                    0 = NO  , 1 = YES
 const.room              =   1;              % run in MRI or eye-tracking room                   1 = MRI , 2 = eye-tracking
-const.training          =   1;              % training session                                  0 = NO  , 1 = YES
+const.training          =   0;              % training session                                  0 = NO  , 1 = YES
 
 % Run order and number per condition
 % ----------------------------------
@@ -69,7 +63,7 @@ const.cond_run_num      =   [01;02];
 if const.training
     const.desiredFD     =   60;             % Desired refresh rate for training on laptop
 else
-    const.desiredFD     =   120;            % Desired refresh rate on bold screen
+    const.desiredFD     =   60;            % Desired refresh rate on propixx screen
 end
 %fprintf(1,'\n\n\tDon''t forget to change before testing\n');
 const.desiredRes        =   [1920,1080];    % Desired resolution

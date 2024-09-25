@@ -34,8 +34,8 @@ if const.room == 1
     scr.disp_sizeX = 773;                       % setting for BOLDScreen32' 7T in mm
     scr.disp_sizeY = 435;                       % setting for BOLDScreen32' 7T in mm
     
-    scr.disp_margin_top = 6.44;                 % top margin where projection screen is not visible in cm
-    scr.disp_margin_bottom = 12.08;              % bottom margin where projection screen is not visible in cm
+    scr.disp_margin_top = 7.05;                 % top margin where projection screen is not visible in cm (175 px on ruler)
+    scr.disp_margin_bottom = 12.08;             % bottom margin where projection screen is not visible in cm
 
 elseif const.room == 2
     % Settings eyelink room
@@ -64,6 +64,7 @@ end
 if ~const.expStart
     Screen('Preference','VisualDebugLevel', 0);
     Screen('Preference','SyncTestSettings', 0.01, 50, 0.25);
+    %Screen('Preference', 'SkipSyncTests', 1);
 else
     Screen('Preference','VisualDebugLevel', 0);
     Screen('Preference','SyncTestSettings', 0.01, 50, 0.25);
