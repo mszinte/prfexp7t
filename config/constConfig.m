@@ -150,25 +150,25 @@ const.fix_dot_probe     =   const.fix_dot;
 % Fixation lines
 const.line_width = const.fix_rad;                                               % fixation line width
 const.line_color = const.white;                                                 % fixation line color
-const.line_fix_up_left = [const.rect_noise(1),...                               % up left part of fix cross x start
+const.line_fix_up_left = [const.rect_center(1) - const.apt_rad,...                               % up left part of fix cross x start
                           const.rect_center(1) - const.fix_out_rim_rad;....     % up left part of fix cross x end
-                          const.rect_noise(2),...                               % up left part of fix cross y start
+                          const.rect_center(2) - const.apt_rad,...                               % up left part of fix cross y start
                           const.rect_center(2) - const.fix_out_rim_rad];        % up left part of fix cross y end
 
 const.line_fix_up_right = [const.rect_center(1) + const.fix_out_rim_rad,...     % up right part of fix cross x start
-                           const.rect_noise(3);....                             % up right part of fix cross x end
+                           const.rect_center(1) + const.apt_rad;....            % up right part of fix cross x end
                            const.rect_center(2) - const.fix_out_rim_rad,...     % up right part of fix cross y start
-                           const.rect_noise(2)];                                % up right part of fix cross y end
+                           const.rect_center(2) - const.apt_rad];               % up right part of fix cross y end
                        
-const.line_fix_down_left = [const.rect_noise(1),...                             % down left part of fix cross x start
+const.line_fix_down_left = [const.rect_center(1) - const.apt_rad,...            % down left part of fix cross x start
                             const.rect_center(1) - const.fix_out_rim_rad;....   % down left part of fix cross x end
-                            const.rect_noise(4),...                             % down left part of fix cross y start
+                            const.rect_center(2) + const.apt_rad,...            % down left part of fix cross y start
                             const.rect_center(2) + const.fix_out_rim_rad];      % down left part of fix cross y end
 
 const.line_fix_down_right = [const.rect_center(1) + const.fix_out_rim_rad,...   % down right part of fix cross x start
-                             const.rect_noise(3);....                           % down right part of fix cross x end
+                             const.rect_center(1) + const.apt_rad;....          % down right part of fix cross x end
                              const.rect_center(2) + const.fix_out_rim_rad,...   % down right part of fix cross y start
-                             const.rect_noise(4)];                              % down right part of fix cross y end
+                             const.rect_center(2) + const.apt_rad;];            % down right part of fix cross y end
 
 % Bar
 const.bar_dir_run       =   [9,1,9,3,9,5,9,7,9];                                                % direction (1 = 180 deg, 2 = 225 deg, 3 =  270 deg, 4 = 315 deg,

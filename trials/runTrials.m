@@ -99,8 +99,8 @@ for bar_pass = 1:const.bar_dir_num
     
     % wait for bar_pass press in trial beginning
     if bar_pass == 1
-        Screen('FillRect',scr.main,const.background_color);
-        drawEmptyTarget(scr,const,scr.x_mid,scr.y_mid);
+        Screen('FillRect',scr.main, const.background_color);
+        drawEmptyTarget(scr, const, const.rect_center(1), const.rect_center(2));
         Screen('DrawLines',scr.main, const.line_fix_up_left, const.line_width, const.line_color, [], 1);
         Screen('DrawLines',scr.main, const.line_fix_up_right, const.line_width, const.line_color, [], 1);
         Screen('DrawLines',scr.main, const.line_fix_down_left, const.line_width, const.line_color, [], 1);
