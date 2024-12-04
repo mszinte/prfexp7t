@@ -162,12 +162,3 @@ bar pass 9 started
 bar pass 9 trial offset 145bar pass 9 trial onset 146
 bar pass 9 trial offset 146bar pass 9 trial onset 147
 bar pass 9 trial offset 147bar pass 9 trial onset 148
-bar pass 9 trial offset 148bar pass 9 trial onset 149
-bar pass 9 trial offset 149bar pass 9 trial onset 150
-bar pass 9 trial offset 150bar pass 9 trial onset 151
-bar pass 9 trial offset 151bar pass 9 trial onset 152
-bar pass 9 trial offset 152bar pass 9 trial onset 153
-bar pass 9 trial offset 153bar pass 9 trial onset 154
-bar pass 9 trial offset 154bar pass 9 trial onset 155
-bar pass 9 trial offset 155bar pass 9 trial onset 156
-bar pass 9 trial offset 156bar pass 9 stopped
