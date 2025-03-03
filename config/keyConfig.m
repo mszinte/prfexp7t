@@ -26,10 +26,10 @@ if const.training
     my_key.right2Val        =   'm';                    % right button 1
 else
     my_key.mri_trVal        =   't';                    % mri trigger letter
-    my_key.left1Val         =   'g';                    % left button index (inside)
-    my_key.left2Val         =   'r';                    % left button thumb (outside)
-    my_key.right1Val        =   'y';                    % right button index (inside)
-    my_key.right2Val        =   'b';                    % right button thumb (outside)
+    my_key.left1Val         =   'r';                    % left button index (inside)
+    my_key.left2Val         =   'g';                    % left button thumb (outside)
+    my_key.right1Val        =   'b';                    % right button index (inside)
+    my_key.right2Val        =   'y';                    % right button thumb (outside)
 end
 
 my_key.escapeVal        =   'escape';               % escape button
