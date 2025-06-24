@@ -15,24 +15,12 @@
 % To do
 % -----
 % - Make a video and keep in mind to crop it for visual design
-% - test it with buttons in scanner
-% - test it with sequence
 
-% Procedure to start
-% ------------------
-% - turn on projector and propixx
-% - turn on laptop (see password on it)
-% - turn on monitor
-% - close the laptop lid
-% - plug USB of button box from top part left (green dot) to laptop
-% - plug the trigger cable to the trigger box
-% - turn on power of button box (top and bottom part)
-% - go to options USB mode, change from Serial to HID (change back to serial at the end) 
-% - put trigger volume to 1
-% - go to back menu and save as default
-% - go to choose mode and pick synchronisation ON EACH RUN
-% - Start session
-% - Launch code, pass instructions, it will wait for first TR
+% To run
+% ------
+% - Check that button box is on USB / HHSC 2x2 / HID KEY BYGRT 
+% - if not set the button box manually to it
+% - if yes try the tumb left (print "r") and tumb right (print "b"); 
 
 % First settings
 % --------------
