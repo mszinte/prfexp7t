@@ -9,9 +9,10 @@
 % Experiment in which we use a square full screen 4 directions (left/right/up/down) 
 % bar pass stimuli with an attention task to the bar in order to obtain pRF retinotopy of 
 % the occipital, parietal, frontal and subcortical structures.
-% Adapted for 7T scanner CRMBM and to the ProPixx projector
+% Adapted for 7T scanner CRMBM and to the ProPixx
+% projector
 % Use circular apperture and cross
-% 2101239748 nsonsa noag
+% 2101239748 nsonsa noag 
 % To do
 % -----
 % - Make a video and keep in mind to crop it for visual design
