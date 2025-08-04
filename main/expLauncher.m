@@ -10,12 +10,8 @@
 % bar pass stimuli with an attention task to the bar in order to obtain pRF retinotopy of 
 % the occipital, parietal, frontal and subcortical structures.
 % Adapted for 7T scanner CRMBM and to the ProPixx projector
-% Use circular apperture and cross.
-% 2100563813 fabien collotibrygbrg
-% 2100563718 joubert paul
-% 2101285305 bouvet maurin 
-% 2101239748 nsonsa noa
-
+% Use circular apperture and cross
+% 2101239748 nsonsa noag
 % To do
 % -----
 % - Make a video and keep in mind to crop it for visual design
