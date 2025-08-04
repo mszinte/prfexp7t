@@ -11,7 +11,10 @@
 % the occipital, parietal, frontal and subcortical structures.
 % Adapted for 7T scanner CRMBM and to the ProPixx projector
 % Use circular apperture and cross.
-% 2100247523
+% 2100563813 fabien collotibrygbrg
+% 2100563718 joubert paul
+% 2101285305 bouvet maurin 
+% 2101239748 nsonsa noa
 
 % To do
 % -----
@@ -19,6 +22,8 @@
 
 % To run
 % ------
+% - Check that the flip of the monitor for the mirror is correct (looking at instructions)
+% - Check the position of the screen, adjust mirror to fit the stim
 % - Check that button box is on USB / HHSC 2x2 / HID KEY BYGRT 
 % - if not set the button box manually to it
 % - if yes try the tumb left (print "r") and tumb right (print "b"); 
