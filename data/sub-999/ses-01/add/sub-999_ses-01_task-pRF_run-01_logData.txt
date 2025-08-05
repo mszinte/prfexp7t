@@ -1,0 +1,29 @@
+bar pass 1 started
+bar pass 1 trial onset 1bar pass 1 trial offset 1bar pass 1 trial onset 2
+bar pass 1 trial offset 2bar pass 1 trial onset 3
+bar pass 1 trial offset 3bar pass 1 trial onset 4
+bar pass 1 trial offset 4bar pass 1 trial onset 5
+bar pass 1 trial offset 5bar pass 1 trial onset 6
+bar pass 1 trial offset 6bar pass 1 trial onset 7
+bar pass 1 trial offset 7bar pass 1 trial onset 8
+bar pass 1 trial offset 8bar pass 1 trial onset 9
+bar pass 1 trial offset 9bar pass 1 trial onset 10
+bar pass 1 trial offset 10bar pass 1 trial onset 11
+bar pass 1 trial offset 11bar pass 1 trial onset 12
+bar pass 1 trial offset 12bar pass 2 trial onset 13
+bar pass 1 stopped
+bar pass 2 started
+bar pass 2 stimulus probe onset 13bar pass 2 trial offset 13bar pass 2 trial onset 14
+bar pass 2 stimulus probe onset 14bar pass 2 trial offset 14bar pass 2 trial onset 15
+bar pass 2 stimulus probe onset 15bar pass 2 trial offset 15bar pass 2 trial onset 16
+bar pass 2 stimulus probe onset 16bar pass 2 trial offset 16bar pass 2 trial onset 17
+bar pass 2 stimulus probe onset 17bar pass 2 trial offset 17bar pass 2 trial onset 18
+bar pass 2 stimulus probe onset 18bar pass 2 trial offset 18bar pass 2 trial onset 19
+bar pass 2 stimulus probe onset 19bar pass 2 trial offset 19bar pass 2 trial onset 20
+bar pass 2 stimulus probe onset 20bar pass 2 trial offset 20bar pass 2 trial onset 21
+bar pass 2 stimulus probe onset 21bar pass 2 trial offset 21bar pass 2 trial onset 22
+bar pass 2 stimulus probe onset 22bar pass 2 trial offset 22bar pass 2 trial onset 23
+bar pass 2 stimulus probe onset 23bar pass 2 trial offset 23bar pass 2 trial onset 24
+bar pass 2 stimulus probe onset 24bar pass 2 trial offset 24bar pass 2 trial onset 25
+bar pass 2 stimulus probe onset 25bar pass 2 trial offset 25bar pass 2 trial onset 26
+bar pass 2 stimulus probe onset 26bar pass 2 trial offset 26bar pass 2 trial onset 27

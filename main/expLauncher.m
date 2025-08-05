@@ -12,7 +12,8 @@
 % Adapted for 7T scanner CRMBM and to the ProPixx
 % projector
 % Use circular apperture and cross
-% 2101239748 nsonsa noag 
+% Flavian: 2101206158
+
 % To do
 % -----
 % - Make a video and keep in mind to crop it for visual design
@@ -21,11 +22,13 @@
 % ------
 % - Check that the flip of the monitor for the mirror is correct (looking at instructions)
 % - Check the position of the screen, adjust mirror to fit the stim
-% - Check that button box is on USB / HHSC 2x2 / HID KEY BYGRT 
-% - if not set the button box manually to it
-% - if yes try the tumb left (print "r") and tumb right (print "b"); 
+% - Check that the button box is working by pressing button while printing in the command window prompt
+% - Try the tumb left (print "r") and tumb right (print "b"). 
+% - If not printing consider unplugging the USB cable of the Current Design box before replugging and testing anew
+% - If not printing the right buttons, check that button box is on USB / HHSC 2x2 / HID KEY BYGRT 
+% Gregoire : 2101019183
 
-% First settings
+% First settingsex
 % --------------
 Screen('CloseAll');clear all;clear mex;clear functions;close all;home;AssertOpenGL;
 
