@@ -9,10 +9,8 @@
 % Experiment in which we use a square full screen 4 directions (left/right/up/down) 
 % bar pass stimuli with an attention task to the bar in order to obtain pRF retinotopy of 
 % the occipital, parietal, frontal and subcortical structures.
-% Adapted for 7T scanner CRMBM and to the ProPixx
-% projector
+% Adapted for 7T scanner CRMBM and to the ProPixx projector
 % Use circular apperture and cross
-% Flavian: 2101206158
 
 % To do
 % -----
@@ -20,15 +18,14 @@
 
 % To run
 % ------
-% - Check that the flip of the monitor for the mirror is correct (looking at instructions)
 % - Check the position of the screen, adjust mirror to fit the stim
+% - Check that the flip of the monitor for the mirror is correct (reversed when looking in the bore) 
 % - Check that the button box is working by pressing button while printing in the command window prompt
 % - Try the tumb left (print "r") and tumb right (print "b"). 
 % - If not printing consider unplugging the USB cable of the Current Design box before replugging and testing anew
-% - If not printing the right buttons, check that button box is on USB / HHSC 2x2 / HID KEY BYGRT 
-% Gregoire : 2101019183
+% - If not printing the right buttons, check that button box is on USB / HHSC 2x2 / HID KEY BYGRT and if not adjust it
 
-% First settingsex
+% First settings
 % --------------
 Screen('CloseAll');clear all;clear mex;clear functions;close all;home;AssertOpenGL;
 
