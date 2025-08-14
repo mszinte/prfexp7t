@@ -23,7 +23,11 @@
 % - Check that the button box is working by pressing button while printing in the command window prompt
 % - Try the tumb left (print "r") and tumb right (print "b"). 
 % - If not printing consider unplugging the USB cable of the Current Design box before replugging and testing anew
-% - If not printing the right buttons, check that button box is on USB / HHSC 2x2 / HID KEY BYGRT and if not adjust it
+% - If not printing the right buttons, check that button box is on USB (not blinking) / HHSC 2x2 / HID KEY BYGRT and if not adjust it
+
+% Peterson
+% Lavoie 2101286163
+
 
 % First settings
 % --------------

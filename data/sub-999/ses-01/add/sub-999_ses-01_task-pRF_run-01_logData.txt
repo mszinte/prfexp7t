@@ -25,5 +25,4 @@ bar pass 2 stimulus probe onset 21bar pass 2 trial offset 21bar pass 2 trial ons
 bar pass 2 stimulus probe onset 22bar pass 2 trial offset 22bar pass 2 trial onset 23
 bar pass 2 stimulus probe onset 23bar pass 2 trial offset 23bar pass 2 trial onset 24
 bar pass 2 stimulus probe onset 24bar pass 2 trial offset 24bar pass 2 trial onset 25
-bar pass 2 stimulus probe onset 25bar pass 2 trial offset 25bar pass 2 trial onset 26
-bar pass 2 stimulus probe onset 26bar pass 2 trial offset 26bar pass 2 trial onset 27
+bar pass 2 stimulus probe onset 25
