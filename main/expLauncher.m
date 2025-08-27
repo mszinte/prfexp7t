@@ -25,8 +25,6 @@
 % - If not printing consider unplugging the USB cable of the Current Design box before replugging and testing anew
 % - If not printing the right buttons, check that button box is on USB (not blinking) / HHSC 2x2 / HID KEY BYGRT and if not adjust it
 
-% Peterson
-% Lavoie 2101286163
 
 
 % First settings
