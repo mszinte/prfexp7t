@@ -25,12 +25,12 @@ const.white             =   [255,255,255];                                      
 const.black             =   [0,0,0];                                                            % black color
 const.gray              =   [128,128,128];                                                      % gray color
 const.yellow            =   [200,200,0];                                                        % yellow color
-const.background_color  =   const.black;                                                        % background color
+const.background_color  =   const.gray;                                                         % background color
 const.stim_color        =   const.white;                                                        % stimulus color
 const.ann_color         =   const.white;                                                        % define anulus around fixation color
 const.ann_probe_color   =   const.white;                                                        % define anulus around fixation color when probe
 const.dot_color         =   const.white;                                                        % define fixation dot color
-const.dot_probe_color   =   const.black;                                                        % define fixation dot color when probe
+const.dot_probe_color   =   const.background_color;                                             % define fixation dot color when probe
 
 %% Time parameters
 const.TR_dur            =   1.6;                                                                % repetition time
