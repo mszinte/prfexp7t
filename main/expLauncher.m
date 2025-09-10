@@ -1,4 +1,4 @@
-%% General experimenter launcher
+u %% General experimenter launcher
 %  =============================
 % By :      Martin SZINTE
 % Projet :  pRFexp7T
@@ -44,7 +44,7 @@ const.mkVideo           =   0;              % Make a video of a run             
 const.scanner           =   0;              % run in MRI scanner                                0 = NO  , 1 = YES
 const.scannerTest       =   0;              % run with T returned at TR time                    0 = NO  , 1 = YES
 const.room              =   2;              % run in MRI or eye-tracking room                   1 = MRI , 2 = eye-tracking
-const.training          =   0;              % training session                                  0 = NO  , 1 = YES
+const.training          =   1;              % training session                                  0 = NO  , 1 = YES
 
 % Run order and number per condition
 % ----------------------------------
@@ -54,7 +54,7 @@ const.cond_run_num      =   [01;02];
 % Desired screen setting
 % ----------------------
 if const.training
-    const.desiredFD     =   60;           % Desired refresh rate for training on laptop
+    const.desiredFD     =   60;             % Desired refresh rate for training on laptop
 else
     const.desiredFD     =   120;            % Desired refresh rate on propixx screen
 end
