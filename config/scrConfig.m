@@ -18,7 +18,12 @@ function [scr]=scrConfig(const)
 
 % Number of the exp screen :
 scr.all                 =   Screen('Screens');
-scr.scr_num             =   2;
+
+if const.room == 1
+    scr.scr_num             =   2;
+elseif const.room == 2
+    scr.scr_num             =   0;
+end
 
 % Screen resolution (pixel) :
 [scr.scr_sizeX, scr.scr_sizeY]...

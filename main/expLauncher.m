@@ -1,4 +1,4 @@
-u %% General experimenter launcher
+%% General experimenter launcher
 %  =============================
 % By :      Martin SZINTE
 % Projet :  pRFexp7T
@@ -35,7 +35,7 @@ Screen('CloseAll');clear all;clear mex;clear functions;close all;home;AssertOpen
 % ----------------
 const.expStart          =   0;              % Start of a recording exp                          0 = NO  , 1 = YES
 const.checkTrial        =   0;              % Print trial conditions (for debugging)            0 = NO  , 1 = YES
-const.genStimuli        =   0;              % Generate the stimuli                              0 = NO  , 1 = YES
+const.genStimuli        =   1;              % Generate the stimuli                              0 = NO  , 1 = YES
 const.drawStimuli       =   0;              % Draw stimuli generated                            0 = NO  , 1 = YES
 const.mkVideo           =   0;              % Make a video of a run                             0 = NO  , 1 = YES
 
