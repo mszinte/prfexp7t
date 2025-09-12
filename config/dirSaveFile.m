@@ -65,8 +65,8 @@ if const.mkVideo
     if ~isfolder(sprintf('others/%s/%s_vid/', const.project,const.cond1_txt))
         mkdir(sprintf('others/%s/%s_vid/', const.project,const.cond1_txt))
     end
-    const.movie_image_file  =   sprintf('others/%s/%s_vid/%s_vid',const.cond1_txt,const.cond1_txt);
-    const.movie_file        =   sprintf('others/%s/%s_vid.mp4',const.cond1_txt);
+    const.movie_image_file  =   sprintf('others/%s/%s_vid/%s_vid',const.project,const.cond1_txt,const.cond1_txt);
+    const.movie_file        =   sprintf('others/%s/%s_vid.mp4',const.project,const.cond1_txt);
 end
 
 end

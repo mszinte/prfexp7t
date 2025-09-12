@@ -18,18 +18,18 @@ function [my_key]=keyConfig(const)
 
 KbName('UnifyKeyNames');
 
-if const.training
+if const.scanner == 0
     my_key.mri_trVal        =   's';                    % mri trigger letter
-    my_key.left1Val         =   'a';                    % left button 1
+    my_key.left1Val         =   'r';                    % left button 1
     my_key.left2Val         =   'q';                    % left button 1
-    my_key.right1Val        =   'p';                    % right button 1
+    my_key.right1Val        =   'u';                    % right button 1
     my_key.right2Val        =   'm';                    % right button 1
-else
+elseif const.scanner == 1
     my_key.mri_trVal        =   't';                    % mri trigger letter
-    my_key.left1Val         =   'g';                    % left button index (inside)g
-    my_key.left2Val         =   'r';                    % left button thumb (outside)r
-    my_key.right1Val        =   'y';                    % right button index (inside)y
-    my_key.right2Val        =   'b';                    % right button thumb (outside)b
+    my_key.left1Val         =   'r';                    % left button thumb (outside)r
+    my_key.left2Val         =   'g';                    % left button index (inside)g
+    my_key.right1Val        =   'b';                    % right button thumb (outside)b
+    my_key.right2Val        =   'y';                    % right button index (inside)y
 end
 
 my_key.escapeVal        =   'escape';               % escape button

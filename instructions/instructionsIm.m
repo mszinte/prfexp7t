@@ -20,7 +20,7 @@ function instructionsIm(scr,const,my_key,nameImage,exitFlag)
 % Version :     1.0
 % ----------------------------------------------------------------------
 
-dirImageFile            =   sprintf('instructions/image/%s', const.project);
+dirImageFile            =   sprintf('instructions/image/%s/', const.project);
 dirImage                =   [dirImageFile,nameImage,'.png'];
 [imageToDraw,~,alpha]   =   imread(dirImage);
 imageToDraw(:,:,4)      =   alpha;
