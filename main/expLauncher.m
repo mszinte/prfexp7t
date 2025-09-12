@@ -33,6 +33,7 @@ Screen('CloseAll');clear all;clear mex;clear functions;close all;home;AssertOpen
 
 % General settings
 % ----------------
+const.project           =   'nCSF';         % Name of the project for which pRF are done (ex: nCSF, BIO7, CRASH...)
 const.expStart          =   0;              % Start of a recording exp                          0 = NO  , 1 = YES
 const.checkTrial        =   0;              % Print trial conditions (for debugging)            0 = NO  , 1 = YES
 const.genStimuli        =   1;              % Generate the stimuli                              0 = NO  , 1 = YES

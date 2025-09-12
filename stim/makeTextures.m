@@ -28,7 +28,7 @@ if ~isfolder(const.stim_folder)
 end
 
 % waiting draw image
-[imageToDraw,~,alpha]   =   imread('instructions/image/WaintingTex.png');
+[imageToDraw,~,alpha]   =   imread(sprintf('instructions/image/%s/WaintingTex.png', const.project));
 imageToDraw(:,:,4)      =   alpha;
 t_handle                =   Screen('MakeTexture',scr.main,imageToDraw);
 texrect                 =   Screen('Rect', t_handle);

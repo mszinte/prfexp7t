@@ -25,7 +25,12 @@ const.white             =   [255,255,255];                                      
 const.black             =   [0,0,0];                                                            % black color
 const.gray              =   [128,128,128];                                                      % gray color
 const.yellow            =   [200,200,0];                                                        % yellow color
-const.background_color  =   const.gray;                                                         % background color
+
+if const.project == 'nCSF'
+    const.background_color  =   const.gray;                                                     % background color
+else 
+    const.background_color  =   const.black;                                                    % background color
+end
 const.stim_color        =   const.white;                                                        % stimulus color
 const.ann_color         =   const.white;                                                        % define anulus around fixation color
 const.ann_probe_color   =   const.white;                                                        % define anulus around fixation color when probe

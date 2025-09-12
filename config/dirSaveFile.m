@@ -17,12 +17,12 @@ function [const] = dirSaveFile(const)
 % ----------------------------------------------------------------------
 
 % Create data directory 
-if ~isfolder(sprintf('data/%s/%s/func/',const.sjct,const.session))
-    mkdir(sprintf('data/%s/%s/func/',const.sjct,const.session))
+if ~isfolder(sprintf('data/%s/%s/%s/func/',const.project,const.sjct,const.session))
+    mkdir(sprintf('data/%s/%s/%s/func/', const.project,const.sjct,const.session))
 end
 
 % Define directory
-const.dat_output_file   =   sprintf('data/%s/%s/func/%s_%s_task-%s_%s',const.sjct,const.session,const.sjct,const.session,const.cond1_txt,const.run_txt);
+const.dat_output_file   =   sprintf('data/%s/%s/%s/func/%s_%s_task-%s_%s', const.project,const.sjct,const.session,const.sjct,const.session,const.cond1_txt,const.run_txt);
 
 % Behavioral data
 const.behav_file        =   sprintf('%s_events.tsv',const.dat_output_file);
@@ -40,18 +40,18 @@ end
 const.behav_file_fid    =   fopen(const.behav_file,'w');
 
 % Create additional info directory
-if ~isfolder(sprintf('data/%s/%s/add/',const.sjct,const.session))
-    mkdir(sprintf('data/%s/%s/add/',const.sjct,const.session))
+if ~isfolder(sprintf('data/%s/%s/%s/add/',const.project,const.sjct,const.session))
+    mkdir(sprintf('data/%s/%s/%s/add/',const.project,const.sjct,const.session))
 end
 
 % Define directory
-const.add_output_file   =   sprintf('data/%s/%s/add/%s_%s_task-%s_%s',const.sjct,const.session,const.sjct,const.session,const.cond1_txt,const.run_txt);
+const.add_output_file   =   sprintf('data/%s/%s/%s/add/%s_%s_task-%s_%s', const.project,const.sjct,const.session,const.sjct,const.session,const.cond1_txt,const.run_txt);
 
 % Define .mat saving file
 const.mat_file          =   sprintf('%s_matFile.mat',const.add_output_file);
 
 % Staircase file
-const.staircase_file    =   sprintf('data/%s/%s/add/%s_staircases.mat',const.sjct,const.session,const.sjct);
+const.staircase_file    =   sprintf('data/%s/%s/%s/add/%s_staircases.mat', const.project,const.sjct,const.session,const.sjct);
 
 % Define .mat stimuli file
 const.stim_folder       =   sprintf('stim/screenshots');
@@ -62,11 +62,11 @@ const.log_file_fid      =   fopen(const.log_file,'w');
 
 % Movie file
 if const.mkVideo
-    if ~isfolder(sprintf('others/%s_vid/',const.cond1_txt))
-        mkdir(sprintf('others/%s_vid/',const.cond1_txt))
+    if ~isfolder(sprintf('others/%s/%s_vid/', const.project,const.cond1_txt))
+        mkdir(sprintf('others/%s/%s_vid/', const.project,const.cond1_txt))
     end
-    const.movie_image_file  =   sprintf('others/%s_vid/%s_vid',const.cond1_txt,const.cond1_txt);
-    const.movie_file        =   sprintf('others/%s_vid.mp4',const.cond1_txt);
+    const.movie_image_file  =   sprintf('others/%s/%s_vid/%s_vid',const.cond1_txt,const.cond1_txt);
+    const.movie_file        =   sprintf('others/%s/%s_vid.mp4',const.cond1_txt);
 end
 
 end
