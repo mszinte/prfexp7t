@@ -1,7 +1,7 @@
 # pRFexp7T
 By :      Martin SZINTE<br/>
 Projet :  pRFexp7T<br/>
-With :    Peneloppe TILSLEY & Jan Patrick STELLMANN
+With :    LASCOMBES Uriel, Peneloppe TILSLEY & Jan Patrick STELLMANN
 Version:  1.0<br/>
 
 ## Version description
