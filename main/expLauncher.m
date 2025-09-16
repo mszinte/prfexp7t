@@ -62,10 +62,41 @@ end
 %fprintf(1,'\n\n\tDon''t forget to change before testing\n');
 const.desiredRes        =   [1920,1080];    % Desired resolution
 
-% Path
-% ----
-dir                     =   (which('expLauncher'));
-cd(dir(1:end-18));
+
+
+
+% Set Path
+% ------------
+codeDir = which('expLauncher');
+cd(codeDir(1:end-18));
+
+% Verify const.project
+% ---------------------
+% Determine the 'prfexp7t' project directory
+[prfexp7tDir, ~, ~] = fileparts(codeDir);      % .../prfexp7t/main
+[prfexp7tDir, ~, ~] = fileparts(prfexp7tDir); % .../prfexp7t
+
+% Construct path to the images folder
+baseDir = fullfile(prfexp7tDir, 'instructions', 'image');
+
+% List all items in the base directory
+d = dir(baseDir);
+
+% Filter only subfolders, excluding '.' and '..'
+folderNames = {d([d.isdir]).name};
+folderNames = setdiff(folderNames, {'.','..'});
+
+% Check if any subfolders were found
+if isempty(folderNames)
+    error('No subfolders found in %s', baseDir);
+end
+
+% Validate const.project against the list of subfolders
+if ~ismember(const.project, folderNames)
+    error('const.project should be one of the [%s]', strjoin(folderNames, ', '));
+end
+
+disp(['Valid project: ' const.project]);
 
 % Add Matlab path
 % ---------------
