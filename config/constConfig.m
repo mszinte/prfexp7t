@@ -26,7 +26,7 @@ const.black             =   [0,0,0];                                            
 const.gray              =   [128,128,128];                                                      % gray color
 const.yellow            =   [200,200,0];                                                        % yellow color
 
-if const.project == 'nCSF'
+if strcmp(const.project, 'nCSF')
     const.background_color  =   const.gray;                                                     % background color
 else 
     const.background_color  =   const.black;                                                    % background color
