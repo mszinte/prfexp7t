@@ -25,7 +25,7 @@
 % - If not printing consider unplugging the USB cable of the Current Design box before replugging and testing anew
 % - If not printing the right buttons, check that button box is on USB (not blinking) / HHSC 2x2 / HID KEY BYGRT and if not adjust it
 
-
+% 2101309882
 
 % First settings
 % --------------
@@ -33,8 +33,8 @@ Screen('CloseAll');clear all;clear mex;clear functions;close all;home;AssertOpen
 
 % General settings
 % ----------------
-const.project           =   'nCSF';         % Name of the project for which pRF are done (ex: nCSF, BIO7, CRASH...)
-const.expStart          =   0;              % Start of a recording exp                          0 = NO  , 1 = YES
+const.project           =   'CRASH';         % Name of the project for which pRF are done (ex: nCSF, BIO7, CRASH...)
+const.expStart          =   1;              % Start of a recording exp                          0 = NO  , 1 = YES
 const.checkTrial        =   0;              % Print trial conditions (for debugging)            0 = NO  , 1 = YES
 const.genStimuli        =   0;              % Generate the stimuli                              0 = NO  , 1 = YES
 const.drawStimuli       =   0;              % Draw stimuli generated                            0 = NO  , 1 = YES
@@ -43,7 +43,7 @@ const.mkVideo           =   0;              % Make a video of a run             
 % External controls
 % -----------------
 const.scanner           =   1;              % run in MRI scanner                                0 = NO  , 1 = YES
-const.scannerTest       =   1;              % run with T returned at TR time                    0 = NO  , 1 = YES
+const.scannerTest       =   0;              % run with T returned at TR time                    0 = NO  , 1 = YES
 const.room              =   1;              % run in MRI or eye-tracking room                   1 = MRI , 2 = eye-tracking
 const.training          =   0;              % training session                                  0 = NO  , 1 = YES
 
