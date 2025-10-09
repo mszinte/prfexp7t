@@ -54,7 +54,7 @@ const.mat_file          =   sprintf('%s_matFile.mat',const.add_output_file);
 const.staircase_file    =   sprintf('data/%s/%s/%s/add/%s_staircases.mat', const.project,const.sjct,const.session,const.sjct);
 
 % Define .mat stimuli file
-const.stim_folder       =   sprintf('stim/screenshots');
+const.stim_folder       =   sprintf('stim/screenshots/%s', const.project);
 
 % Log file
 const.log_file          =   sprintf('%s_logData.txt',const.add_output_file);
