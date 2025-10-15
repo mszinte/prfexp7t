@@ -98,7 +98,7 @@ const.noise_pixel       =   vaDeg2pix(const.noise_pixelVal,scr);                
 const.native_noise_dim  =   round([const.noise_size/const.noise_pixel,...
                                    const.noise_size/const.noise_pixel]);                        % starting size of the patch
 const.noise_color       =   'pink';                                                             % stimuli noise color ('white','pink','brownian');
-const.apt_rad_val       =   6.5;                                                                  % aperture stimuli radius in dva
+const.apt_rad_val       =   6;                                                                  % aperture stimuli radius in dva
 const.apt_rad           =   vaDeg2pix(const.apt_rad_val,scr);                                   % aperture stimuli radius in pixels
 
 % compute random image order
