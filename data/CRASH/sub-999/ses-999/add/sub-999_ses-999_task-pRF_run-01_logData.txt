@@ -101,13 +101,15 @@ bar pass 6 stimulus probe onset 89bar pass 6 trial offset 89bar pass 6 trial ons
 bar pass 6 stimulus probe onset 90bar pass 6 trial offset 90bar pass 6 trial onset 91
 bar pass 6 stimulus probe onset 91bar pass 6 trial offset 91bar pass 6 trial onset 92
 bar pass 6 stimulus probe onset 92bar pass 6 trial offset 92bar pass 6 trial onset 93
+bar pass 6 event mri_trigger
 bar pass 6 stimulus probe onset 93bar pass 6 trial offset 93bar pass 6 trial onset 94
 bar pass 6 stimulus probe onset 94bar pass 6 trial offset 94bar pass 6 trial onset 95
 bar pass 6 stimulus probe onset 95bar pass 6 trial offset 95bar pass 6 trial onset 96
 bar pass 6 stimulus probe onset 96bar pass 6 trial offset 96bar pass 6 trial onset 97
 bar pass 6 stimulus probe onset 97bar pass 6 trial offset 97bar pass 6 trial onset 98
 bar pass 6 stimulus probe onset 98bar pass 6 trial offset 98bar pass 6 trial onset 99
-bar pass 6 stimulus probe onset 99bar pass 6 trial offset 99bar pass 6 trial onset 100
+bar pass 6 stimulus probe onset 99bar pass 6 event mri_trigger
+bar pass 6 trial offset 99bar pass 6 trial onset 100
 bar pass 6 stimulus probe onset 100bar pass 6 trial offset 100bar pass 6 trial onset 101
 bar pass 6 stimulus probe onset 101bar pass 6 trial offset 101bar pass 6 trial onset 102
 bar pass 6 stimulus probe onset 102bar pass 6 trial offset 102bar pass 6 trial onset 103

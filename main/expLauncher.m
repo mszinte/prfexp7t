@@ -36,8 +36,8 @@ Screen('CloseAll');clear all;clear mex;clear functions;close all;home;AssertOpen
 const.project           =   'CRASH';         % Name of the project for which pRF are done (ex: nCSF, BIO7, CRASH...)
 const.expStart          =   1;              % Start of a recording exp                          0 = NO  , 1 = YES
 const.checkTrial        =   0;              % Print trial conditions (for debugging)            0 = NO  , 1 = YES
-const.genStimuli        =   1;              % Generate the stimuli                              0 = NO  , 1 = YES
-const.drawStimuli       =   1;              % Draw stimuli generated                            0 = NO  , 1 = YES
+const.genStimuli        =   0;              % Generate the stimuli                              0 = NO  , 1 = YES
+const.drawStimuli       =   0;              % Draw stimuli generated                            0 = NO  , 1 = YES
 const.mkVideo           =   0;              % Make a video of a run                             0 = NO  , 1 = YES
 
 % External controls
@@ -97,6 +97,29 @@ if ~ismember(const.project, folderNames)
 end
 
 disp(['Valid project: ' const.project]);
+
+% Warning before deleting stim
+% -----------------------------
+if const.genStimuli == 1
+    disp('You are about to delete the previous stimulus and regenerate a new one.');
+    reply = input('Do you want to continue? (Y/N): ', 's');
+    
+    % Normalize user input (remove spaces and lowercase)
+    reply = strtrim(lower(reply));
+    
+    if ismember(reply, {'y', 'yes', 'Y', 'Yes','YES'})
+        disp('Proceeding with stimulus regeneration...');
+        % Continue the script normally
+        
+    elseif ismember(reply, {'n', 'no','N','No','NO'})
+        disp('Operation cancelled. Script terminated.');
+        return;  % Stop the entire script
+        
+    else
+        disp('Invalid input. Script terminated.');
+        return;  % Stop the entire script
+    end
+end 
 
 % Add Matlab path
 % ---------------
