@@ -31,8 +31,6 @@
 % --------------
 Screen('CloseAll');clear all;clear mex;clear functions;close all;home;AssertOpenGL;
 
-2101285327
-
 % General settings
 % ----------------
 const.project           =   'CRASH';         % Name of the project for which pRF are done (ex: nCSF, BIO7, CRASH...)
@@ -63,9 +61,6 @@ else
 end
 %fprintf(1,'\n\n\tDon''t forget to change before testing\n');
 const.desiredRes        =   [1920,1080];    % Desired resolution
-
-
-
 
 % Set Path
 % ------------
