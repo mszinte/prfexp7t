@@ -25,7 +25,7 @@
 % - If not printing consider unplugging the USB cable of the Current Design box before replugging and testing anew
 % - If not printing the right buttons, check that button box is on USB (not blinking) / HHSC 2x2 / HID KEY BYGRT and if not adjust it
 
-% 2101309882
+% 2101285329
 
 % First settings
 % --------------
@@ -61,6 +61,10 @@ else
 end
 %fprintf(1,'\n\n\tDon''t forget to change before testing\n');
 const.desiredRes        =   [1920,1080];    % Desired resolution
+
+% IPP 2101326005
+% IPP 2101285329 (Russu)
+
 
 % Set Path
 % ------------
