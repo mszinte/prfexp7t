@@ -25,7 +25,7 @@
 % - If not printing consider unplugging the USB cable of the Current Design box before replugging and testing anew
 % - If not printing the right buttons, check that button box is on USB (not blinking) / HHSC 2x2 / HID KEY BYGRT and if not adjust it
 
-% 2101372392
+% 2100134332
 
 % First settings
 % --------------
@@ -33,7 +33,7 @@ Screen('CloseAll');clear all;clear mex;clear functions;close all;home;AssertOpen
 
 % General settings
 % ----------------
-const.project           =   'CRASH';         % Name of the project for which pRF are done (ex: nCSF, BIO7, CRASH...)
+const.project           =   'BIO7';         % Name of the project for which pRF are done (ex: nCSF, BIO7, CRASH...)
 const.expStart          =   1;              % Start of a recording exp                          0 = NO  , 1 = YES
 const.checkTrial        =   0;              % Print trial conditions (for debugging)            0 = NO  , 1 = YES
 const.genStimuli        =   0;              % Generate the stimuli                              0 = NO  , 1 = YES
