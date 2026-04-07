@@ -16,7 +16,7 @@
 % -----
 % - Make a video and keep in mind to crop it for visual design
 
-% To run
+% To run 
 % ------
 % - Check the position of the screen, adjust mirror to fit the stim
 % - Check that the flip of the monitor for the mirror is correct (reversed when looking in the bore) 
